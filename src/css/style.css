@@ -1,0 +1,335 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header header header header"
+        "about about about about"
+        "services services services services"
+        "ratings ratings ratings ratings"
+        "projects projects projects projects"
+        "contact contact contact contact";
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.header {
+    grid-area: header;
+    height: 100vh;
+    background: url(/src/images/desktop/image-header.jpg) no-repeat center/cover;
+}
+
+.header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.header .header-container .menu {
+    display: flex;
+    align-items: center;
+}
+
+.header .header-container .menu .item {
+    padding: 0 20px;
+}
+
+.header .header-container .menu .item a {
+    font-family: "Barlow", sans-serif;
+    color: hsl(0, 0%, 100%);
+    font-size: 18px;
+    font-weight: 400;
+    transition: 0.3s ease-in-out;
+}
+
+.header .header-container .menu .item a:hover {
+    opacity: 0.5;
+}
+
+.header .header-container .menu .item .contact-header {
+    font-family: "Fraunces", sans-serif;
+    text-transform: uppercase;
+    color: hsl(212, 27%, 19%);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 100%);
+    width: 130px;
+    height: 50px;
+    border-radius: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.header .header-container .menu .item .contact-header:hover {
+    opacity: 1;
+    background-color: hsl(199, 100%, 73%);
+    color: hsl(0, 0%, 100%);
+}
+
+.header .title {
+    margin-top: 80px;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    letter-spacing: 5px;
+    font-family: "Fraunces", sans-serif;
+}
+
+.header::after {
+    content: url(/src/images/icon-arrow-down.svg);
+    position: absolute;
+    right: 930px;
+    bottom: 450px;
+    animation: downarrow 0.7s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes downarrow {
+    0% {
+        -webkit-transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(0.4em);
+        opacity: 0.4;
+    }
+}
+
+.header .header-container .nav-toggle-btn {
+    display: none;
+}
+
+.about {
+    grid-area: about;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
+}
+
+.about .item {
+    padding: 20%;
+}
+
+.about .item .title {
+    font-size: 40px;
+    color: hsl(212, 27%, 19%);
+}
+
+.about .item .description {
+    font-family: "Barlow", sans-serif;
+    padding: 30px 0;
+    color: hsl(232, 10%, 55%);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.about .item .more {
+    text-transform: uppercase;
+    color: hsl(212, 27%, 19%);
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.about .item .more {
+    position: relative;
+}
+
+.about .item .more::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 4px;
+    background-color: hsl(51, 100%, 49%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.about .item .more.right::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 4px;
+    background-color: hsl(7, 99%, 70%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.about .item .more:hover::after {
+    transform: scaleX(1);
+}
+
+.about .image-right {
+    background: url(/src/images/desktop/image-transform.jpg) no-repeat center/cover;
+}
+
+.about .image-left {
+    background: url(/src/images/desktop/image-stand-out.jpg) no-repeat center/cover;
+}
+
+.services {
+    grid-area: services;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.services .graphic {
+    background: url(/src/images/desktop/image-graphic-design.jpg) no-repeat center/cover;
+    text-align: center;
+    color: hsl(167, 40%, 24%);
+}
+
+.services .graphic .title {
+    padding-top: 500px;
+    font-size: 40px;
+}
+
+.services .graphic .description {
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 30px 150px 50px;
+}
+
+.services .photography {
+    background: url(/src/images/desktop/image-photography.jpg) no-repeat center/cover;
+    text-align: center;
+    color: hsl(198, 62%, 26%);
+}
+
+.services .photography .title {
+    padding-top: 500px;
+    font-size: 40px;
+}
+
+.services .photography .description {
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 30px 150px 50px;
+}
+
+.ratings {
+    grid-area: ratings;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 80px;
+    padding: 150px 0;
+    text-align: center;
+}
+
+.ratings .title {
+    grid-column: 1;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: hsl(232, 10%, 55%);
+    font-size: 24px;
+}
+
+.ratings .rating-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px;
+}
+
+.ratings .rating-container .rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+.ratings .rating-container .rating .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.ratings .rating-container .rating .description {
+    font-family: "Barlow", sans-serif;
+    padding: 60px 0;
+    color: hsl(213, 9%, 39%);
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.ratings .rating-container .rating .name {
+    padding-bottom: 10px;
+    color: hsl(212, 27%, 19%);
+}
+
+.ratings .rating-container .rating .job {
+    font-family: "Barlow", sans-serif;
+    color: hsl(210, 4%, 67%);
+    font-weight: 500;
+}
+
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.projects .project .image {
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.projects .project a:hover img {
+    opacity: 0.6;
+}
+
+.contact {
+    grid-area: contact;
+    background-color: hsl(168, 34%, 41%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.contact .menu {
+    display: flex;
+    gap: 50px;
+    padding: 30px 0 50px;
+}
+
+.contact .menu .item a {
+    font-family: "Barlow", sans-serif;
+    color: hsl(167, 40%, 24%);
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.contact .menu .item a:hover {
+    color: hsl(0, 0%, 100%);
+}
+
+.contact .logos {
+    display: flex;
+    gap: 30px;
+}
+
+.contact .logos .logo a {
+    color: hsl(167, 40%, 24%);
+    transition: 0.3s ease-in-out;
+}
+
+.contact .logos .logo a:hover {
+    color: hsl(0, 0%, 100%);
+}
+
+.contact .logos .logo a .fa-square-facebook,
+.fa-instagram,
+.fa-x-twitter,
+.fa-pinterest {
+    font-size: 24px;
+}
