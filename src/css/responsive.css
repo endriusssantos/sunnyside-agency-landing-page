@@ -1,6 +1,6 @@
 @media (max-width: 425px) {
     .header {
-        background: url(/src/images/mobile/image-header.jpg) no-repeat center/cover;
+        background: url(./src/images/mobile/image-header.jpg) no-repeat center/cover;
     }
 
     .header .header-container {
@@ -96,11 +96,11 @@
     }
 
     .about .image-right {
-        background: url(/src/images/mobile/image-transform.jpg) no-repeat center/cover;
+        background: url(./src/images/mobile/image-transform.jpg) no-repeat center/cover;
     }
     
     .about .image-left {
-        background: url(/src/images/mobile/image-stand-out.jpg) no-repeat center/cover;
+        background: url(./src/images/mobile/image-stand-out.jpg) no-repeat center/cover;
     }
     
     .services {
@@ -108,7 +108,7 @@
     }
 
     .services .graphic {
-        background: url(/src/images/mobile/image-graphic-design.jpg) no-repeat center/cover;
+        background: url(./src/images/mobile/image-graphic-design.jpg) no-repeat center/cover;
     }
 
     .services .graphic .title {
@@ -121,7 +121,7 @@
     }
 
     .services .photography {
-        background: url(/src/images/mobile/image-photography.jpg) no-repeat center/cover;
+        background: url(./src/images/mobile/image-photography.jpg) no-repeat center/cover;
     }
 
     .services .photography .title {
